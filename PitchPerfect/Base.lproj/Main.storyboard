@@ -33,7 +33,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8q-vc-w65">
-                                <rect key="frame" x="109.5" y="447.5" width="155" height="155"/>
+                                <rect key="frame" x="155" y="447.5" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="3dO-L5-5Fe"/>
+                                    <constraint firstAttribute="height" constant="64" id="NkX-ed-8eI"/>
+                                </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nK9-Zt-yIr"/>
@@ -80,7 +84,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cdK-Ug-RZ9">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cdK-Ug-RZ9">
                                 <rect key="frame" x="16" y="64" width="343" height="583"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g0J-dm-edx">
@@ -127,11 +131,14 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-yK-DCb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-yK-DCb">
                                         <rect key="frame" x="0.0" y="519" width="343" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-wx-q2Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
+                                                <rect key="frame" x="139.5" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="YVi-Jv-tBK"/>
+                                                </constraints>
                                                 <state key="normal" image="Stop"/>
                                             </button>
                                         </subviews>
@@ -150,6 +157,15 @@
                             <constraint firstItem="tvn-4z-Bi0" firstAttribute="top" secondItem="cdK-Ug-RZ9" secondAttribute="bottom" constant="20" id="lN4-ch-LGt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chipmunkButton" destination="C41-Rq-xGA" id="pU7-np-n4H"/>
+                        <outlet property="echoButton" destination="XKu-VM-Hkf" id="sfv-3i-bfA"/>
+                        <outlet property="rabbitButton" destination="5VQ-Hl-duk" id="LtF-qH-lin"/>
+                        <outlet property="reverbButton" destination="AN4-xc-tYs" id="be0-HW-BKs"/>
+                        <outlet property="snailButton" destination="oPf-Oz-JNY" id="W1q-EN-9Fp"/>
+                        <outlet property="stopButton" destination="MT0-wx-q2Q" id="eKq-si-AUG"/>
+                        <outlet property="vaderButton" destination="pLh-Zw-zMK" id="MET-Ry-6Qe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsB-r5-JwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
